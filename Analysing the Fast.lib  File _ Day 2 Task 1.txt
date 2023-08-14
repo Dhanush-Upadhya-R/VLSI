@@ -1,0 +1,9 @@
+A fast.lib file is a static library file that is used to check the set-up time where the delays are less, and hence the tool maps the design with a minimum cell area.
+The file is developed in such a way that it contains all types of unit attributes (basic units for measurements) like time, voltage, current, resistance, leakage power, etc. 
+The file contains, in the beginning, all the models that are involved in a synthesis process, such as the Dealy model, the Check model, the power model, the capacitance model, and other models. 
+Each model has a lookup table, which is used mainly in the static timing analysis. 
+Initially, we predefine all the types of delays involved in the timing parameters, like the slew rates, which are observed at the upper and lower thresholds for raise and fall time, along with their percentages (pct). 
+Further, each of these parameters includes their own lookup table templates, which contain two forms of index values used as matrices. Each parameter is tested with the design; hence, the respective outputs are generated, which are used for the purpose of analysis. 
+Then all the transitions, like raise, fall, and propagation delays, are given for concluding all the timing parameter checks. 
+Then the file contains the power parameters, like internal power, fall power, etc. 
+After this, we check the design cells for which the mapping has taken place for each pin, where the inputs and their raise and fall capacitance are defined. We even know the direction of input and output pins and their signal levels.
